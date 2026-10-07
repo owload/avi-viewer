@@ -1,0 +1,74 @@
+.av {
+  --av-bg: #1b1b1a;
+  --av-fg: #f4f4f1;
+  --av-muted: #b9b9b2;
+  --av-line: #3a3a37;
+  --av-error: #ff9c8f;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+  box-sizing: border-box;
+  background: var(--av-bg);
+  color: var(--av-fg);
+  font: 14px/1.4 system-ui, -apple-system, sans-serif;
+}
+.av .av-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 56px;
+  padding: 0 8px 0 20px;
+  flex: none;
+  border-bottom: 1px solid var(--av-line);
+}
+.av .av-name {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+}
+.av .av-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 0;
+  border-radius: 10px;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+.av .av-close:hover { background: rgba(255, 255, 255, 0.1); }
+.av .av-close:focus-visible { outline: 2px solid #fadb58; }
+.av .av-body {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+}
+.av .av-video {
+  flex: 1;
+  min-height: 0;
+  max-width: 100%;
+  width: 100%;
+  background: #000;
+}
+.av .av-state {
+  max-width: 460px;
+  margin: 0;
+  text-align: center;
+  color: var(--av-muted);
+}
+.av .av-state p { margin: 8px 0 0; }
+.av .av-error { color: var(--av-error); }
+.av .av-note { margin: 0; color: var(--av-muted); font-size: 13px; text-align: center; }
+.av .av-progress { width: 240px; height: 6px; accent-color: #fadb58; }

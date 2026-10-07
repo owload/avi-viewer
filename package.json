@@ -1,0 +1,60 @@
+{
+  "name": "@owload/avi-viewer",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A view-only AVI viewer extension for Owload: re-wraps H.264 AVI files into MP4 in the browser, built on the @owload/editor-sdk contract.",
+  "type": "module",
+  "main": "./dist/avi-viewer.js",
+  "module": "./dist/avi-viewer.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/avi-viewer.js"
+    },
+    "./extension": {
+      "types": "./dist/extension.d.ts",
+      "import": "./dist/extension.js"
+    },
+    "./style.css": "./dist/style.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "npm run clean && vite build && tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "prepare": "npm run build"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.5",
+    "@owload/editor-sdk": "github:owload/editor-sdk#857d97f13749ff87aff4ea49f5acee96871b0fb0",
+    "@types/node": "^22.20.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^4.7.0",
+    "eslint": "^9.39.5",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^15.15.0",
+    "happy-dom": "^20.14.5",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "typescript": "~5.8",
+    "typescript-eslint": "^8.71.0",
+    "vite": "^6.4.3",
+    "vitest": "^3.2.7"
+  }
+}
