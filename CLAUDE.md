@@ -6,7 +6,7 @@ Guidance for Claude Code when working in this repository.
 
 `@owload/avi-viewer` — the AVI viewer of Owload, a **view-only extension** that follows the contract of
 `@owload/editor-sdk` (`owload-docs/decisions/0019-editor-extensions.md` and `0026-view-only-extensions-and-avi-viewer.md`).
-It re-wraps H.264 AVI files into an MP4 in memory and plays them. The host (`owload-front`) is separate; never edit it
+It re-wraps H.264 AVI files into an MP4 in memory and plays them. The host (`owload-frontend`) is separate; never edit it
 from here. See `README.md`.
 
 ## Rules
